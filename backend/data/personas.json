@@ -1,0 +1,26 @@
+{
+    "default": {
+        "upi_income": 25000,
+        "gst_income": 18000,
+        "rent_streak": 12,
+        "job_stability": 7
+    },
+    "street vendor": {
+        "upi_income": 42000,
+        "gst_income": 18000,
+        "rent_streak": 24,
+        "job_stability": 8
+    },
+    "gig worker": {
+        "upi_income": 35000,
+        "gst_income": 15000,
+        "rent_streak": 8,
+        "job_stability": 6
+    },
+    "freelancer": {
+        "upi_income": 80000,
+        "gst_income": 60000,
+        "rent_streak": 36,
+        "job_stability": 9
+    }
+}
