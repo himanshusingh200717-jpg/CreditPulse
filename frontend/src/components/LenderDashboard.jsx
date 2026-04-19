@@ -24,7 +24,8 @@ export default function LenderDashboard({ profile, onReset }) {
   useEffect(() => {
     const fetchScore = async () => {
       try {
-        const response = await fetch('http://localhost:8000/api/score', {
+        const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+        const response = await fetch(`${apiUrl}/api/score`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -60,7 +61,8 @@ export default function LenderDashboard({ profile, onReset }) {
     if (!result) return;
     setIsExporting(true);
     try {
-      const response = await fetch('http://localhost:8000/api/export', {
+      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+      const response = await fetch(`${apiUrl}/api/export`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

@@ -44,7 +44,8 @@ export default function BorrowerIntake({ onSubmit }) {
       const uploadData = new FormData();
       uploadData.append('file', file);
       try {
-        const res = await fetch('http://localhost:8000/api/upload', {
+        const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+        const res = await fetch(`${apiUrl}/api/upload`, {
           method: 'POST',
           body: uploadData,
         });
